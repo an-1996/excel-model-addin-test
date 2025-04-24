@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Financial Modeler Task Pane</title>
+
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+    <style>
+      /* Add some basic styling */
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      .input-group {
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 300px; /* Limit width */
+      }
+      .input-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .input-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box; /* Include padding in width */
+        border: 1px solid #ccc;
+      }
+      .status {
+          margin-top: 15px;
+          font-style: italic;
+          color: #555;
+          min-height: 20px; /* Reserve space */
+          width: 100%;
+          max-width: 300px;
+          text-align: center;
+      }
+      button {
+          padding: 10px 20px;
+          cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body class="ms-font-m ms-welcome ms-Fabric">
+    <h2 class="ms-font-xl">Gross Profit Margin Calculator</h2>
+
+    <div class="input-group">
+      <label for="periodInput">Enter Period (e.g., 2025-04):</label>
+      <input type="text" id="periodInput" placeholder="YYYY-MM" />
+    </div>
+
+    <button class="ms-Button" id="calculateGpmButton">Calculate GPM</button>
+
+    <div id="status" class="status"></div>
+
+    <script type="text/javascript" src="taskpane.js"></script>
+  </body>
+</html>
